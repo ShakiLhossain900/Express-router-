@@ -13,3 +13,6 @@ router.post('/product', (req, res, next) => {
 })
 
 module.exports = router;
+
+
+//using express routing is done
