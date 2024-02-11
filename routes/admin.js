@@ -4,9 +4,7 @@ const router = express.Router();
 
 //  /admin/add-product => GET request user input dibe /admin akhane check korbe na karon ata app y /admin hoye akhan thake /add-product will only take
 router.get("/add-product", (req, res, next) => {
-  res.send(
-    '<form action="/admin/add-product" method="POST"><input type="text" name="title"><button type="submit">Add Product</button></form>'
-  );
+  res.send  
 });
 
 //  /admin/add-product => Post request user ouput pabe like fb post er moto
