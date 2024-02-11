@@ -9,7 +9,7 @@ router.get("/add-product", (req, res, next) => {
 });
 
 router.post("/add-product", (req, res, next) => {
-  console.log(req.body);
+  console.log(req.body);   //user get y jei input ta diyece amara post y ata pabu
   res.redirect("/");
 });
 
