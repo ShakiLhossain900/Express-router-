@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -12,7 +13,7 @@ app.use('/admin',adminRoutes); //only /admin dile adim route file jabe
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
-    res.status(404).send('<h1>page is not found</h1>');  //dummy path dile like /sdfdhsfjk
+    res.sendFile(path.join(__dirname, './', 'views', 'error.html'));
 });
 
 
