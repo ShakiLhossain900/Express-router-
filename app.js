@@ -13,7 +13,7 @@ app.use('/admin',adminRoutes); //only /admin dile adim route file jabe
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
-    res.sendFile(path.join(__dirname, './', 'views', 'error.html'));
+    res.sendFile(path.join(__dirname, './', 'views', '404.html'));
 });
 
 
