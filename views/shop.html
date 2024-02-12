@@ -4,13 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Product</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0 ;
+        }
+     .main-header {
+        width: 100%;
+        height: 3.5rem;
+        background-color: #dbc441;
+     }
+     .main-header__item-list{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+     }
+        
+    </style>
 </head>
 <body>
-    <header>
-        <nev>
-            <ul>
-                <li><a href="/">Shop</a></li>
-                <li><a href="/add-product">Add Product</a></li>
+    <header class="main-header">
+        <nev class="main-header__nev">
+            <ul class="main-header__item-list">
+                <li clss="main-header__item"><a href="/">Shop</a></li>
+                <li class="main-header__item"> <a href="/add-product">Add Product</a></li>
             </ul>
         </nev>
     </header>
