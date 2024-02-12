@@ -5,7 +5,7 @@ const router = express.Router();
 
 //  /admin/add-product => GET request user input dibe /admin akhane check korbe na karon ata app y /admin hoye akhan thake /add-product will only take
 router.get("/add-product", (req, res, next) => {
-  res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html'));  //__dirname get the file of this folder diye bojay
+  res.sendFile(path.join(__dirname, '..', 'views', 'add-product.html'));  //__dirname get the file of this folder diye bojay
 });
 
 //  /admin/add-product => Post request user ouput pabe like fb post er moto
