@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 app.set('view engine', 'pug'); //Note: The view engine cache does not cache the contents of the template’s output, 
-app.set('view', 'views');  //directory fo the folder (find)
+app.set('views', 'views');  //directory fo the folder (find)
 
 const admindata = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
