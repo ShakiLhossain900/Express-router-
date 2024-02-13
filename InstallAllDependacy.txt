@@ -2,3 +2,5 @@ free availabe template engines :
 EJS  
 Pug(jade) 
  Handlebars
+ install the HTML template engines
+ npm install --save ejs pug express-handlebars
