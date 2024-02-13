@@ -8,8 +8,13 @@ const adminData = require('./admin');
 const router = express.Router();
 
 router.get('/',(req, res, next) =>{
-    console.log(adminData.products);
-    res.sendFile(path.join(rootDir, 'views', 'shop.html'));
+    // console.log(adminData.products);
+    // res.sendFile(path.join(rootDir, 'views', 'shop.html'));
+ 
+    // for the pug express js kiso change korece 
+    res.render('shop'); //ata auto shop.pug ke niye nibe output y
+
+
 });
 
 module.exports = router;
