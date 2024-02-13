@@ -13,10 +13,14 @@ router.get("/add-product", (req, res, next) => {
 
 //  /admin/add-product => Post request user ouput pabe like fb post er moto
 router.post("/add-product", (req, res, next) => {
-  console.log(req.body);   //user get y jei input ta diyece amara post y ata pabu
+  //console.log(req.body);   //user get y jei input ta diyece amara post y ata pabu
+  
+  products.push({title : req.body.title})
   
   res.redirect("/");
 });
 
 //module.exports = router;
 
+exports.routes = router;
+exports.products  = products;
