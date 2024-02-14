@@ -12,7 +12,8 @@ router.get('/',(req, res, next) =>{
     // res.sendFile(path.join(rootDir, 'views', 'shop.html'));
  
     // for the pug express js kiso change korece 
-    res.render('shop'); //ata auto shop.pug ke niye nibe output y
+    const products = adminData.products;
+    res.render('shop', {prods : products, docTitle : 'Shop'}); //ata auto shop.pug ke niye nibe output y
 
 
 });
