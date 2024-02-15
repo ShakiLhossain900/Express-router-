@@ -17,7 +17,8 @@ app.use('/admin',admindata.routes); //only /admin dile adim route file jabe
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
-    res.sendFile(path.join(__dirname, './', 'views', '404.html'));
+    //res.sendFile(path.join(__dirname, './', 'views', '404.html'));
+    res.status(404).render('404');
 });
 
 
