@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
+const expressHbs = require('express-handlebars');
 
 const app = express();
 
@@ -23,3 +24,6 @@ app.use((req, res, next) => {
 
 
 app.listen(3000);
+
+
+//pug one or two option er jonnu use kore handlebar amara pug ke dynamic vabe use korte parbeu
