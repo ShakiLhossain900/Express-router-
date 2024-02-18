@@ -23,11 +23,13 @@ const path = require('path');
 
 const express = require('express');
 
-const rootDir = require('../util/path');
-const adminData = require('./admin');
+const productsCtroller = require('../controllers/products');
+
+// const rootDir = require('../util/path');  //using the logic in conttroler tai amader agolo lagbe na
+// const adminData = require('./admin');
 
 const router = express.Router();
 
-router.get('/', );
+router.get('/', productsCtroller.getProducts);
 
 module.exports = router;

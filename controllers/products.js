@@ -16,7 +16,7 @@ exports.postAddProduct = (req, res, next) => {
 };
 
 exports.getProducts = (req, res, next) => {
-  const products = adminData.products;
+  //   const products = adminData.products; // no need this karon product array same file tai
   res.render("shop", {
     prods: products,
     pageTitle: "Shop",
