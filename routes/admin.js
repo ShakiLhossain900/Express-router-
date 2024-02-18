@@ -49,7 +49,7 @@ const router = express.Router();
 const products = [];
 
 // /admin/add-product => GET
-router.get('/add-product',);
+router.get('/add-product', );
 
 // /admin/add-product => POST
 router.post('/add-product', (req, res, next) => {
