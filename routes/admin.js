@@ -42,7 +42,10 @@ const path = require('path');
 
 const express = require('express');
 
-const rootDir = require('../util/path');
+const productsCtrollers =require('../controllers/products');
+
+// const rootDir = require('../util/path'); //controller add korar karone ata lagbe na
+
 
 const router = express.Router();
 
