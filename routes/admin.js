@@ -49,17 +49,16 @@ const productsCtrollers =require('../controllers/products');
 
 const router = express.Router();
 
-const products = [];
+
 
 // /admin/add-product => GET
-router.get('/add-product', productsCtrollers.getAddProduct); //
+router.get('/add-product', productsCtrollers.getAddProduct); // onlye reference fuction/
 
 // /admin/add-product => POST
-router.post('/add-product', (req, res, next) => {
-  products.push({ title: req.body.title });
-  res.redirect('/');
-});
+router.post('/add-product', productsCtrollers.postAddProduct);
 
-exports.routes = router;
-exports.products = products;
+// exports.routes = router;
+// exports.products = products;
+
+module.exports = router;
 
