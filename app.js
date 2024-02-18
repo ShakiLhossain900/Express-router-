@@ -27,4 +27,3 @@ app.listen(3000);
 //pug one or two option er jonnu use kore handlebar amara pug ke dynamic vabe use korte parbeu
 //pug y onk dependancy ache jetay amara reuse korte code ke onk jamle and html er virtor
 //js likhte kiso somossa ache tai amara ejs shift korbu
-//
