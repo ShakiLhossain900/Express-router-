@@ -1,5 +1,4 @@
-const Product = require('../Models/product')
-
+const Product = require("../Models/product");
 
 exports.getAddProduct = (req, res, next) => {
   res.render("add-product", {
@@ -20,13 +19,14 @@ exports.postAddProduct = (req, res, next) => {
 
 exports.getProducts = (req, res, next) => {
   //   const products = adminData.products; // no need this karon product array same file tai
-  const products= Product.fetchAll();
-  res.render("shop", {
-    prods: products,
-    pageTitle: "Shop",
-    path: "/",
-    hasProducts: products.length > 0,
-    activeShop: true,
-    productCSS: true,
+  Product.fetchAll((products) => {
+    res.render("shop", {
+      prods: products,
+      pageTitle: "Shop",
+      path: "/",
+      hasProducts: products.length > 0,
+      activeShop: true,
+      productCSS: true,
+    });
   });
 };
