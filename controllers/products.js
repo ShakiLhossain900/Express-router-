@@ -1,32 +1,65 @@
-const Product = require("../Models/product");
+// const Product = require("../Models/product");
+
+// exports.getAddProduct = (req, res, next) => {
+//   res.render("add-product", {
+//     pageTitle: "Add Product",
+//     path: "/admin/add-product",
+//     formsCSS: true,
+//     productCSS: true,
+//     activeAddProduct: true,
+//   });
+// };
+
+// exports.postAddProduct = (req, res, next) => {
+//   // products.push({ title: req.body.title });
+//   const product = new Product(req.body.title);
+//   product.save();
+//   res.redirect("/");
+// };
+
+// exports.getProducts = (req, res, next) => {
+//   //   const products = adminData.products; // no need this karon product array same file tai
+//   Product.fetchAll((products) => {
+//     res.render("shop", {
+//       prods: products,
+//       pageTitle: "Shop",
+//       path: "/",
+//       hasProducts: products.length > 0,
+//       activeShop: true,
+//       productCSS: true,
+//     });
+//   });
+// };
+
+
+
+const Product = require('../models/product');
 
 exports.getAddProduct = (req, res, next) => {
-  res.render("add-product", {
-    pageTitle: "Add Product",
-    path: "/admin/add-product",
+  res.render('add-product', {
+    pageTitle: 'Add Product',
+    path: '/admin/add-product',
     formsCSS: true,
     productCSS: true,
-    activeAddProduct: true,
+    activeAddProduct: true
   });
 };
 
 exports.postAddProduct = (req, res, next) => {
-  // products.push({ title: req.body.title });
   const product = new Product(req.body.title);
   product.save();
-  res.redirect("/");
+  res.redirect('/');
 };
 
 exports.getProducts = (req, res, next) => {
-  //   const products = adminData.products; // no need this karon product array same file tai
-  Product.fetchAll((products) => {
-    res.render("shop", {
+  Product.fetchAll(products => {
+    res.render('shop', {
       prods: products,
-      pageTitle: "Shop",
-      path: "/",
+      pageTitle: 'Shop',
+      path: '/',
       hasProducts: products.length > 0,
       activeShop: true,
-      productCSS: true,
+      productCSS: true
     });
   });
 };
