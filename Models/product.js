@@ -109,8 +109,9 @@ module.exports = class Product {
     this.price = price;
   }
 
+  //save add to the database
   save() {
-    this.id = Math.random().toString();
+    this.id = Math.random().toString(); //we create real products  unique id
     getProductsFromFile(products => {
       products.push(this);
       fs.writeFile(p, JSON.stringify(products), err => {
